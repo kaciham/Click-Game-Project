@@ -15,48 +15,63 @@ body{
     color: white;
 }
 
-.cookies {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: grey;
+.container {
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding: 3rem;
-    opacity: 1;
-    padding: 3rem;
-    transition: 1s;
-}
-
-.cookies-btn{
-    display: flex;
-}
-
- .btn{
-    color: white;
-    padding: 1rem;
-    border: none;
-    border-radius: 10px;
- }
-
- .btn.btn-success{
     background-color: #1E2337;
-    margin: 5px;
- }
+}
 
- 
+#btn-red{
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: relative;
+    animation: rouge 2s infinite;
+}
 
- .btn.btn-deny{
-    background-color: rgb(148, 144, 144);
-    margin: 5px;
- }
+@keyframes rouge {
+    0% {
+        transform: none;
+      }
+      20% {
+        transform: translateX(-68px) translateY(30px) skewX(15deg) skewY(-10deg) scale(0.95);
+      }
+      25%, 44% {
+        transform: none;
+      }
+      50%, 60% {
+        transform: translateX(68px) translateY(-40px) skewX(5deg) skewY(2deg) scaleX(0.95);
+      }
+      66%, 100% {
+        transform: none;
+      }
+}
 
- .btn.btn-deny:hover {
-    background-color: #bcbdc2;
- }
+#btn-blue{
+    background-color: rgb(17, 0, 255);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: relative;
+    animation: blue  2s infinite;
+}
 
- .btn.btn-success:hover{
-    background-color: #384370;
- }
+@keyframes blue {
+    0% {left:0px; top:0px;}
+    25% {left:0px; top:200px;}
+    50% {left:200px; top:200px;}
+    75% {left:200px; top:0px;}
+    100% {left:0px; top:0px;}
+}
+
+h2{
+    display: none;
+}
+
+#bouton{
+    display: none;
+}
